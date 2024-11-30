@@ -46,11 +46,11 @@ def test_01_form():
     company.send_keys("SkyPro")
 
     WebDriverWait(driver, 10).until(
-    EC.presence_of_element_located((By.CSS_SELECTOR, '[type = submit]'))
+    EC.presence_of_element_located((By.CSS_SELECTOR, "button.btn.btn-outline-primary.mt-3"))
     )
 
 
-    driver.find_element(By.CSS_SELECTOR, "[type = submit]").click()
+    driver.find_element(By.CSS_SELECTOR, "button.btn.btn-outline-primary.mt-3").click()
 
     color_form = driver.find_element(By.CSS_SELECTOR, "[id = zip-code]").value_of_css_property("color")
 
